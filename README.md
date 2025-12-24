@@ -1,62 +1,27 @@
-# YouTube Clip Downloader
+# YouTube Clip Downloader - Chrome Extension
 
-Download YouTube clips in the highest quality (1080p60) with ease! Choose between a simple Python CLI tool or a Chrome browser extension.
+Download YouTube clips directly from your browser with a single click! Includes a bonus live stream monitoring tool.
 
 ## Features
 
-- 🎬 Download YouTube clips and videos in highest quality (1080p 60fps)
+- 🌐 Chrome extension for one-click clip downloads from YouTube
+- 🎬 Automatic highest quality downloads (1080p 60fps)
 - 🔄 Monitor live streams and auto-download clips when stream ends
-- 🌐 Chrome extension for one-click downloads from YouTube
-- 📦 Simple Python CLI tool for quick downloads
-- ⚡ Automatic quality selection (HLS format for best results)
+- ⚡ Smart format selection (HLS format for best results)
+- 📦 Local Flask server handles all downloads
 
 ---
 
-## Quick Start Guide
+## Installation & Setup
 
-### Option 1: Python CLI Tool (Simplest!)
-
-**Requirements:**
-- Python 3.7+
-- yt-dlp
-
-**Installation:**
-
-```bash
-# Install yt-dlp
-pip install yt-dlp
-# OR using Homebrew on macOS
-brew install yt-dlp
-```
-
-**Usage:**
-
-```bash
-# Download a clip (highest quality by default)
-python3 youtube_clip_downloader.py "https://youtube.com/clip/CLIP_ID"
-
-# Download to specific folder
-python3 youtube_clip_downloader.py "https://youtube.com/clip/CLIP_ID" -o ~/Downloads
-
-# Choose specific quality
-python3 youtube_clip_downloader.py "https://youtube.com/clip/CLIP_ID" -q 720p
-
-# See all options
-python3 youtube_clip_downloader.py --help
-```
-
----
-
-### Option 2: Chrome Browser Extension
+### Step 1: Install Dependencies
 
 **Requirements:**
 - Python 3.7+
 - Chrome/Chromium browser
 - yt-dlp, Flask, and flask-cors
 
-**Installation:**
-
-1. **Install dependencies:**
+**Install dependencies:**
 
 ```bash
 cd youtube-clip-downloader-extension
@@ -74,7 +39,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install flask flask-cors
 ```
 
-2. **Load Chrome Extension:**
+### Step 2: Load Chrome Extension
 
 - Open Chrome and go to `chrome://extensions/`
 - Enable "Developer mode" (toggle in top-right)
@@ -82,9 +47,13 @@ pip install flask flask-cors
 - Select the `youtube-clip-downloader-extension` folder
 - You should see "YouTube Clip Downloader" in your extensions list
 
-**Usage:**
+---
 
-1. **Start the download server:**
+## Usage
+
+### Using the Chrome Extension
+
+**1. Start the download server:**
 
 ```bash
 cd youtube-clip-downloader-extension
@@ -98,20 +67,20 @@ You should see:
 🌐 Server running on http://localhost:5001
 ```
 
-2. **Download clips:**
+**2. Download clips:**
 
 - Go to YouTube and open any clip URL (e.g., `https://youtube.com/clip/...`)
 - Look for the red "Download Clip" button on the page
 - Click it to start downloading
 - Check your Downloads folder for the video file
 
-3. **Stop the server when done:**
+**3. Stop the server when done:**
 
 - Press `Ctrl+C` in the terminal
 
 ---
 
-### Option 3: Monitor Live Streams
+### Monitor Live Streams (Bonus Tool)
 
 Download clips from live streams automatically when the stream ends.
 
@@ -222,11 +191,11 @@ youtube-clip-downloader-extension/
 
 ## Tips & Best Practices
 
-1. **Best Quality:** All tools default to highest quality (1080p60), but you can override with `-q` flag in CLI
+1. **Best Quality:** All downloads default to highest quality (1080p60) automatically
 2. **Live Streams:** Use `monitor_and_download.py` to automatically download when stream ends
-3. **Batch Downloads:** Use the CLI tool with a loop for multiple clips
-4. **Server Management:** The download server runs locally and is only accessible from your browser
-5. **File Names:** Files are automatically named based on the video title with special characters removed
+3. **Server Management:** The download server runs locally and is only accessible from your browser
+4. **File Names:** Files are automatically named based on the video title with special characters removed
+5. **Extension Reload:** If you update the extension files, reload it in `chrome://extensions/`
 
 ---
 
@@ -242,6 +211,12 @@ youtube-clip-downloader-extension/
 ## License
 
 Free to use and modify. Share with friends! 🎉
+
+---
+
+## Related Projects
+
+Looking for a simple CLI tool instead? Check out [YouTube Clip Downloader CLI](https://github.com/VanyaHuaman/youtube-clip-downloader)
 
 ---
 
