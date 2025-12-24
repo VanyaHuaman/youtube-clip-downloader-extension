@@ -206,16 +206,16 @@ brew install yt-dlp
 ```
 youtube-clip-downloader-extension/
 ├── README.md                    # This file
-├── youtube_clip_downloader.py   # Python CLI tool
-├── monitor_and_download.py      # Live stream monitor
-├── download_server.py           # Flask server for extension
+├── QUICK_START.md              # Quick reference guide
+├── manifest.json                # Chrome extension manifest
 ├── background.js                # Extension background script
 ├── content.js                   # Extension content script
 ├── styles.css                   # Extension button styles
-├── manifest.json                # Chrome extension manifest
+├── icon*.png                    # Extension icons
+├── download_server.py           # Flask server for extension
+├── monitor_and_download.py      # Live stream monitor script
 ├── start_server.sh              # Server startup script
-├── QUICK_START.md              # Quick reference guide
-└── icon*.png                    # Extension icons
+└── requirements.txt             # Python dependencies
 ```
 
 ---
