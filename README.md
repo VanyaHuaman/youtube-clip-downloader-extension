@@ -26,8 +26,8 @@ Download YouTube clips directly from your browser with a single click! Includes 
 ```bash
 cd youtube-clip-downloader-extension
 
-# Install yt-dlp
-pip install yt-dlp
+# Install yt-dlp (use pip3 to ensure Python 3)
+pip3 install yt-dlp
 # OR
 brew install yt-dlp
 
@@ -35,7 +35,7 @@ brew install yt-dlp
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install Flask
+# Install Flask (pip works inside venv, or use pip3)
 pip install flask flask-cors
 ```
 
@@ -144,7 +144,7 @@ If you create a clip from a **currently live stream**, the download may not work
 
 **"yt-dlp not found":**
 ```bash
-pip install yt-dlp
+pip3 install yt-dlp
 # or
 brew install yt-dlp
 ```
