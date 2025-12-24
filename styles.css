@@ -1,0 +1,68 @@
+/* YouTube Clip Downloader Styles */
+
+.clip-download-container {
+  margin: 12px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.clip-download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "YouTube Sans", "Roboto", sans-serif;
+}
+
+.clip-download-button:hover {
+  background: #cc0000;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.clip-download-button:active {
+  transform: translateY(0);
+}
+
+.clip-download-button:disabled {
+  background: #909090;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.clip-download-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.clip-download-button .spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Dark mode support */
+html[dark] .clip-download-button,
+[dark] .clip-download-button {
+  background: #cc0000;
+}
+
+html[dark] .clip-download-button:hover,
+[dark] .clip-download-button:hover {
+  background: #ff0000;
+}
